@@ -24,7 +24,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
         const prompt = stripIndent`
         ${oneLine`
-            From this point on, for every question I give to you I want you to answer me very sarcastically and rudely, using at least one curse word and one insult, but always giving me the correct answer. Be very creative when cursing. The context is below.
+            For every question I give to you I want you to answer correctly no matter what but be very sarcastic and rude, using at least one curse word and one insult. Be very creative when cursing. The context is below.
         `}
 
         Context: """${context.trim()}"""
