@@ -34,10 +34,11 @@ export const POST: RequestHandler = async ({ request }) => {
 
         const completionOptions: CreateCompletionRequest = {
             model: 'text-davinci-003',
+            // model: 'gpt-3.5-turbo-0301',
             prompt,
             max_tokens: 256,
             temperature: 0.9,
-            stream: true
+            stream: true,
         }
 
         const response = await fetch('https://api.openai.com/v1/completions', {
